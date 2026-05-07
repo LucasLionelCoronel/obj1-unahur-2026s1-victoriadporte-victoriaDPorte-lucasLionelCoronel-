@@ -1,0 +1,28 @@
+import example.*
+describe "presupuestos" {
+  test "victoria practica judo, tiene 4 entrenadores y de elemento tiene un traje de judo" {
+    victoriDPorte.cambiarAltura(150)
+    victoriDPorte.cambiarDisciplinaYElemento(judo, trajeDeJudo)
+    victoriDPorte.añadirEntrenadores(4)
+
+    assert.equals(8580, victoriDPorte.presupuesto())
+  }
+
+  test "victoria practica tenis, tiene una altura de 2 metros, de elemento una raqueta y tiene 2 entrenadores" {
+
+    victoriDPorte.cambiarAltura(200)
+    victoriDPorte.cambiarDisciplinaYElemento(tenis, raqueta)
+    victoriDPorte.añadirEntrenadores(2)
+
+    assert.equals(2515, victoriDPorte.presupuesto())
+  }
+
+  test "victoria practica hockey, mide 180cm. tiene un palo de hockey, con 5 protecciones y 3 entrenadores" {
+
+    victoriDPorte.cambiarAltura(180)
+    victoriDPorte.cambiarDisciplinaYElemento(hockey, paloDeHockey)
+    victoriDPorte.añadirEntrenadores(3)
+
+    assert.equals(1180, victoriDPorte.presupuesto())
+  }
+}
